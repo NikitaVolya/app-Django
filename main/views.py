@@ -4,13 +4,17 @@ from django.shortcuts import render
 
 def index(request):
     context = {
-        "title": "Home",
-        "content": "1",
-        'a': False
+        "title": "Home - Главная",
+        "content": "Магазин мебели",
     }
 
     return render(request, 'main/index.html', context)
 
 
 def about(request):
-    return HttpResponse("About page") 
+    context = {
+        "title": "about - O нас",
+        "content": "Информация",
+        "text_on_page": "jaslk;djlas[dajksd[askdja[skdja[sdjasdk[jasjdk[]]]]]]"
+    }
+    return render(request, "main/about.html", context)
